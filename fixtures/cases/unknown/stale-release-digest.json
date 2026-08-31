@@ -1,0 +1,21 @@
+{
+  "schema": "gooo/semantic-drift-guard/comparison/v1",
+  "case_id": "unknown-stale-release-digest",
+  "expected_decision": "UNKNOWN",
+  "base": {
+    "schema": "gooo/semantic-drift-guard/bundle/v1", "release_id": "gooo.release.base.v1", "release_tag": "v0.0.0",
+    "release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831", "observed_release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831",
+    "source": {"path": "fixtures/bundles/base/source.gooo", "digest": "sha256:179bbc7910892817b08dab5c0b3c9c521d8f5db06f40b535fbf7f02cbc881398"},
+    "semantic_ir": {"path": "fixtures/bundles/base/semantic-ir.json", "digest": "sha256:5b808faca7f42bd2e0de4fe1390ba39f7fd88065c376c27edae6f0f20a6f889a"},
+    "generated": {"path": "fixtures/bundles/base/semantic.gooo.go", "digest": "sha256:33c202b7660fec6cd8bd69ca3472d3ecd631c0f54f94d5c9bf6dfb98efc12a00"}
+  },
+  "candidate": {
+    "schema": "gooo/semantic-drift-guard/bundle/v1", "release_id": "gooo.release.stale-release.v1", "release_tag": "v0.0.1",
+    "release_digest": "sha256:0140cf0236e8bce5d74f81702b31c5f09a46bf00a73f7050df6b38bb816eaf8c", "observed_release_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "source": {"path": "fixtures/bundles/base/source.gooo", "digest": "sha256:179bbc7910892817b08dab5c0b3c9c521d8f5db06f40b535fbf7f02cbc881398"},
+    "semantic_ir": {"path": "fixtures/bundles/base/semantic-ir.json", "digest": "sha256:5b808faca7f42bd2e0de4fe1390ba39f7fd88065c376c27edae6f0f20a6f889a"},
+    "generated": {"path": "fixtures/bundles/base/semantic.gooo.go", "digest": "sha256:33c202b7660fec6cd8bd69ca3472d3ecd631c0f54f94d5c9bf6dfb98efc12a00"}
+  },
+  "replay": [],
+  "authority": {"repository_writes": 0, "local_test_executions": 0, "cross_project_required_gates": 0}
+}

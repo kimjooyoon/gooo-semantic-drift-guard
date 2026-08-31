@@ -1,0 +1,34 @@
+{
+  "schema": "gooo/semantic-drift-guard/comparison/v1",
+  "case_id": "normal-formatting-comment-order-equivalent",
+  "expected_decision": "CLOSED",
+  "base": {
+    "schema": "gooo/semantic-drift-guard/bundle/v1",
+    "release_id": "gooo.release.base.v1",
+    "release_tag": "v0.0.0",
+    "release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831",
+    "observed_release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831",
+    "source": {"path": "fixtures/bundles/base/source.gooo", "digest": "sha256:179bbc7910892817b08dab5c0b3c9c521d8f5db06f40b535fbf7f02cbc881398"},
+    "semantic_ir": {"path": "fixtures/bundles/base/semantic-ir.json", "digest": "sha256:5b808faca7f42bd2e0de4fe1390ba39f7fd88065c376c27edae6f0f20a6f889a"},
+    "generated": {"path": "fixtures/bundles/base/semantic.gooo.go", "digest": "sha256:33c202b7660fec6cd8bd69ca3472d3ecd631c0f54f94d5c9bf6dfb98efc12a00"}
+  },
+  "candidate": {
+    "schema": "gooo/semantic-drift-guard/bundle/v1",
+    "release_id": "gooo.release.equivalent-candidate.v1",
+    "release_tag": "v0.0.1",
+    "release_digest": "sha256:5b532055946edf5e5a145bbff98ddb486ebd06e759060f45bbd4cff1565c09c6",
+    "observed_release_digest": "sha256:5b532055946edf5e5a145bbff98ddb486ebd06e759060f45bbd4cff1565c09c6",
+    "source": {"path": "fixtures/bundles/equivalent-candidate/source.gooo", "digest": "sha256:9e0fd51cba5534672342595b564335132c77fd90c9dea8a1535f53d513cdda27"},
+    "semantic_ir": {"path": "fixtures/bundles/equivalent-candidate/semantic-ir.json", "digest": "sha256:aca1fb93ff9804c80760056f760594a135023af7c32b884026dcdaafaad0dcd1"},
+    "generated": {"path": "fixtures/bundles/equivalent-candidate/semantic.gooo.go", "digest": "sha256:5855cbf5a258969846cf367f7e03abe75a58c4b0c9403df538e9a13a4dfef817"}
+  },
+  "replay": [{
+    "input_id": "request-001",
+    "status": "REPLAYED",
+    "base_release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831",
+    "candidate_release_digest": "sha256:5b532055946edf5e5a145bbff98ddb486ebd06e759060f45bbd4cff1565c09c6",
+    "base_value_digest": "sha256:9108ed03e4182fcc74e1051550337378cf11e04c0656cb9d147ad84b26e38396",
+    "candidate_value_digest": "sha256:9108ed03e4182fcc74e1051550337378cf11e04c0656cb9d147ad84b26e38396"
+  }],
+  "authority": {"repository_writes": 0, "local_test_executions": 0, "cross_project_required_gates": 0}
+}

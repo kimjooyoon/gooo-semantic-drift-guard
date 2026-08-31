@@ -1,0 +1,195 @@
+{
+  "schema": "gooo/semantic-drift-guard/semantic-ir/v1",
+  "source_path": "fixtures/bundles/authority-candidate/source.gooo",
+  "source_semantic_digest": "sha256:e67508b1a8d1aa48ab4b039fa75fc141f46f6c16536f8ee67a5f3194aa09b80b",
+  "contract_path": "contracts/semantic-drift-guard-denominator-v1.json",
+  "contract_digest": "sha256:951702a806fde1de43d3c8a8c3b7c6ed941a6a2364d567f5f39403573792bfec",
+  "graph_digest": "sha256:e67508b1a8d1aa48ab4b039fa75fc141f46f6c16536f8ee67a5f3194aa09b80b",
+  "graph": {
+    "schema": "gooo/semantic-drift-guard/semantic-graph/v1",
+    "nodes": [
+      {
+        "id": "gooo.cell.semantic-drift-guard.activity-drift",
+        "activity": "DetectActivityDrift",
+        "proof_choice": "REGRESSION",
+        "indicator_class": "DRIVER",
+        "metric_id": "gooo.metric.semantic-drift-guard.activity-drift.v1",
+        "artifact": "drift-receipt",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.authority-drift",
+        "activity": "DetectAuthorityDrift",
+        "proof_choice": "REGRESSION",
+        "indicator_class": "OUTCOME",
+        "metric_id": "gooo.metric.semantic-drift-guard.authority-drift.v1",
+        "artifact": "drift-receipt",
+        "authority": "WRITE_REPOSITORY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.comment-equivalence",
+        "activity": "ClassifyCommentEquivalence",
+        "proof_choice": "COHERENCE",
+        "indicator_class": "GUARDRAIL",
+        "metric_id": "gooo.metric.semantic-drift-guard.comment-equivalence.v1",
+        "artifact": "equivalent-change",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.formatting-equivalence",
+        "activity": "ClassifyFormattingEquivalence",
+        "proof_choice": "COHERENCE",
+        "indicator_class": "OUTCOME",
+        "metric_id": "gooo.metric.semantic-drift-guard.formatting-equivalence.v1",
+        "artifact": "equivalent-change",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.generated-binding",
+        "activity": "BindGeneratedGo",
+        "proof_choice": "FOUNDATION",
+        "indicator_class": "GUARDRAIL",
+        "metric_id": "gooo.metric.semantic-drift-guard.generated-binding.v1",
+        "artifact": "generated-binding",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.graph-canonicalization",
+        "activity": "CanonicalizeSemanticGraph",
+        "proof_choice": "FOUNDATION",
+        "indicator_class": "DRIVER",
+        "metric_id": "gooo.metric.semantic-drift-guard.graph-canonicalization.v1",
+        "artifact": "semantic-graph",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.ir-binding",
+        "activity": "BindSemanticIR",
+        "proof_choice": "FOUNDATION",
+        "indicator_class": "OUTCOME",
+        "metric_id": "gooo.metric.semantic-drift-guard.ir-binding.v1",
+        "artifact": "ir-binding",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.order-equivalence",
+        "activity": "ClassifyOrderEquivalence",
+        "proof_choice": "COHERENCE",
+        "indicator_class": "DRIVER",
+        "metric_id": "gooo.metric.semantic-drift-guard.order-equivalence.v1",
+        "artifact": "equivalent-change",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.precedence-receipt",
+        "activity": "EmitPrecedenceReceipt",
+        "proof_choice": "REGRESSION",
+        "indicator_class": "GUARDRAIL",
+        "metric_id": "gooo.metric.semantic-drift-guard.precedence-receipt.v1",
+        "artifact": "decision-receipt",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.relation-drift",
+        "activity": "DetectRelationDrift",
+        "proof_choice": "REGRESSION",
+        "indicator_class": "GUARDRAIL",
+        "metric_id": "gooo.metric.semantic-drift-guard.relation-drift.v1",
+        "artifact": "drift-receipt",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.replay-binding",
+        "activity": "BindReplayObservation",
+        "proof_choice": "COHERENCE",
+        "indicator_class": "OUTCOME",
+        "metric_id": "gooo.metric.semantic-drift-guard.replay-binding.v1",
+        "artifact": "replay-receipt",
+        "authority": "READ_ONLY"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.source-binding",
+        "activity": "BindSource",
+        "proof_choice": "FOUNDATION",
+        "indicator_class": "DRIVER",
+        "metric_id": "gooo.metric.semantic-drift-guard.source-binding.v1",
+        "artifact": "source-binding",
+        "authority": "READ_ONLY"
+      }
+    ],
+    "relations": [
+      {
+        "id": "gooo.cell.semantic-drift-guard.activity-drift|MEASURES|gooo.metric.semantic-drift-guard.activity-drift.v1",
+        "from": "gooo.cell.semantic-drift-guard.activity-drift",
+        "to": "gooo.metric.semantic-drift-guard.activity-drift.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.authority-drift|MEASURES|gooo.metric.semantic-drift-guard.authority-drift.v1",
+        "from": "gooo.cell.semantic-drift-guard.authority-drift",
+        "to": "gooo.metric.semantic-drift-guard.authority-drift.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.comment-equivalence|MEASURES|gooo.metric.semantic-drift-guard.comment-equivalence.v1",
+        "from": "gooo.cell.semantic-drift-guard.comment-equivalence",
+        "to": "gooo.metric.semantic-drift-guard.comment-equivalence.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.formatting-equivalence|MEASURES|gooo.metric.semantic-drift-guard.formatting-equivalence.v1",
+        "from": "gooo.cell.semantic-drift-guard.formatting-equivalence",
+        "to": "gooo.metric.semantic-drift-guard.formatting-equivalence.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.generated-binding|MEASURES|gooo.metric.semantic-drift-guard.generated-binding.v1",
+        "from": "gooo.cell.semantic-drift-guard.generated-binding",
+        "to": "gooo.metric.semantic-drift-guard.generated-binding.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.graph-canonicalization|MEASURES|gooo.metric.semantic-drift-guard.graph-canonicalization.v1",
+        "from": "gooo.cell.semantic-drift-guard.graph-canonicalization",
+        "to": "gooo.metric.semantic-drift-guard.graph-canonicalization.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.ir-binding|MEASURES|gooo.metric.semantic-drift-guard.ir-binding.v1",
+        "from": "gooo.cell.semantic-drift-guard.ir-binding",
+        "to": "gooo.metric.semantic-drift-guard.ir-binding.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.order-equivalence|MEASURES|gooo.metric.semantic-drift-guard.order-equivalence.v1",
+        "from": "gooo.cell.semantic-drift-guard.order-equivalence",
+        "to": "gooo.metric.semantic-drift-guard.order-equivalence.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.precedence-receipt|MEASURES|gooo.metric.semantic-drift-guard.precedence-receipt.v1",
+        "from": "gooo.cell.semantic-drift-guard.precedence-receipt",
+        "to": "gooo.metric.semantic-drift-guard.precedence-receipt.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.relation-drift|MEASURES|gooo.metric.semantic-drift-guard.relation-drift.v1",
+        "from": "gooo.cell.semantic-drift-guard.relation-drift",
+        "to": "gooo.metric.semantic-drift-guard.relation-drift.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.replay-binding|MEASURES|gooo.metric.semantic-drift-guard.replay-binding.v1",
+        "from": "gooo.cell.semantic-drift-guard.replay-binding",
+        "to": "gooo.metric.semantic-drift-guard.replay-binding.v1",
+        "kind": "MEASURES"
+      },
+      {
+        "id": "gooo.cell.semantic-drift-guard.source-binding|MEASURES|gooo.metric.semantic-drift-guard.source-binding.v1",
+        "from": "gooo.cell.semantic-drift-guard.source-binding",
+        "to": "gooo.metric.semantic-drift-guard.source-binding.v1",
+        "kind": "MEASURES"
+      }
+    ]
+  }
+}
