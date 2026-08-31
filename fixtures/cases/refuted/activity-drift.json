@@ -1,0 +1,21 @@
+{
+  "schema": "gooo/semantic-drift-guard/comparison/v1",
+  "case_id": "refuted-semantic-activity-drift",
+  "expected_decision": "REFUTED",
+  "base": {
+    "schema": "gooo/semantic-drift-guard/bundle/v1", "release_id": "gooo.release.base.v1", "release_tag": "v0.0.0",
+    "release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831", "observed_release_digest": "sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831",
+    "source": {"path": "fixtures/bundles/base/source.gooo", "digest": "sha256:179bbc7910892817b08dab5c0b3c9c521d8f5db06f40b535fbf7f02cbc881398"},
+    "semantic_ir": {"path": "fixtures/bundles/base/semantic-ir.json", "digest": "sha256:5b808faca7f42bd2e0de4fe1390ba39f7fd88065c376c27edae6f0f20a6f889a"},
+    "generated": {"path": "fixtures/bundles/base/semantic.gooo.go", "digest": "sha256:33c202b7660fec6cd8bd69ca3472d3ecd631c0f54f94d5c9bf6dfb98efc12a00"}
+  },
+  "candidate": {
+    "schema": "gooo/semantic-drift-guard/bundle/v1", "release_id": "gooo.release.activity-candidate.v1", "release_tag": "v0.0.1",
+    "release_digest": "sha256:24c06e260a4a88158e7de5569e6454cebb9d5f1a379837e48da6f6ade419f9f3", "observed_release_digest": "sha256:24c06e260a4a88158e7de5569e6454cebb9d5f1a379837e48da6f6ade419f9f3",
+    "source": {"path": "fixtures/bundles/activity-candidate/source.gooo", "digest": "sha256:08d54671ae6d5eb1ae5b456f84d0dd4296a161064427afb80aa654912186ba98"},
+    "semantic_ir": {"path": "fixtures/bundles/activity-candidate/semantic-ir.json", "digest": "sha256:8aed64cdbc8003f6af5ff83115e8206253ffeadcec336349c1fdcdb91018a3c7"},
+    "generated": {"path": "fixtures/bundles/activity-candidate/semantic.gooo.go", "digest": "sha256:49c5d28dc968bd6540eea304229f5f637540a3097c3bb26cbb0115dc6f0d225c"}
+  },
+  "replay": [{"input_id":"request-001","status":"REPLAYED","base_release_digest":"sha256:c4121a78f1424a1552391e546849a3127c37aa426963788206259cef540f8831","candidate_release_digest":"sha256:24c06e260a4a88158e7de5569e6454cebb9d5f1a379837e48da6f6ade419f9f3","base_value_digest":"sha256:9108ed03e4182fcc74e1051550337378cf11e04c0656cb9d147ad84b26e38396","candidate_value_digest":"sha256:9108ed03e4182fcc74e1051550337378cf11e04c0656cb9d147ad84b26e38396"}],
+  "authority": {"repository_writes": 0, "local_test_executions": 0, "cross_project_required_gates": 0}
+}

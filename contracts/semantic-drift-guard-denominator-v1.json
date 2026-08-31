@@ -1,0 +1,30 @@
+{
+  "schema": "gooo/semantic-drift-guard/denominator/v1",
+  "denominator_id": "gooo://denominator/semantic-drift-guard/v1",
+  "candidate_id": "gooo.product.semantic-drift-guard.v1",
+  "total": 12,
+  "proofs": [
+    {"choice": "FOUNDATION", "total": 4},
+    {"choice": "COHERENCE", "total": 4},
+    {"choice": "REGRESSION", "total": 4}
+  ],
+  "indicator_classes": [
+    {"class": "DRIVER", "total": 4},
+    {"class": "OUTCOME", "total": 4},
+    {"class": "GUARDRAIL", "total": 4}
+  ],
+  "cells": [
+    {"ordinal": 1, "id": "gooo.cell.semantic-drift-guard.source-binding", "activity": "BindSource", "proof_choice": "FOUNDATION", "indicator_class": "DRIVER", "metric_id": "gooo.metric.semantic-drift-guard.source-binding.v1", "artifact": "source-binding", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 2, "id": "gooo.cell.semantic-drift-guard.ir-binding", "activity": "BindSemanticIR", "proof_choice": "FOUNDATION", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.semantic-drift-guard.ir-binding.v1", "artifact": "ir-binding", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 3, "id": "gooo.cell.semantic-drift-guard.generated-binding", "activity": "BindGeneratedGo", "proof_choice": "FOUNDATION", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.semantic-drift-guard.generated-binding.v1", "artifact": "generated-binding", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 4, "id": "gooo.cell.semantic-drift-guard.graph-canonicalization", "activity": "CanonicalizeSemanticGraph", "proof_choice": "FOUNDATION", "indicator_class": "DRIVER", "metric_id": "gooo.metric.semantic-drift-guard.graph-canonicalization.v1", "artifact": "semantic-graph", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 5, "id": "gooo.cell.semantic-drift-guard.formatting-equivalence", "activity": "ClassifyFormattingEquivalence", "proof_choice": "COHERENCE", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.semantic-drift-guard.formatting-equivalence.v1", "artifact": "equivalent-change", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 6, "id": "gooo.cell.semantic-drift-guard.comment-equivalence", "activity": "ClassifyCommentEquivalence", "proof_choice": "COHERENCE", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.semantic-drift-guard.comment-equivalence.v1", "artifact": "equivalent-change", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 7, "id": "gooo.cell.semantic-drift-guard.order-equivalence", "activity": "ClassifyOrderEquivalence", "proof_choice": "COHERENCE", "indicator_class": "DRIVER", "metric_id": "gooo.metric.semantic-drift-guard.order-equivalence.v1", "artifact": "equivalent-change", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 8, "id": "gooo.cell.semantic-drift-guard.replay-binding", "activity": "BindReplayObservation", "proof_choice": "COHERENCE", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.semantic-drift-guard.replay-binding.v1", "artifact": "replay-receipt", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 9, "id": "gooo.cell.semantic-drift-guard.relation-drift", "activity": "DetectRelationDrift", "proof_choice": "REGRESSION", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.semantic-drift-guard.relation-drift.v1", "artifact": "drift-receipt", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 10, "id": "gooo.cell.semantic-drift-guard.activity-drift", "activity": "DetectActivityDrift", "proof_choice": "REGRESSION", "indicator_class": "DRIVER", "metric_id": "gooo.metric.semantic-drift-guard.activity-drift.v1", "artifact": "drift-receipt", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 11, "id": "gooo.cell.semantic-drift-guard.authority-drift", "activity": "DetectAuthorityDrift", "proof_choice": "REGRESSION", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.semantic-drift-guard.authority-drift.v1", "artifact": "drift-receipt", "evaluator": "guard.Compare", "authority": "READ_ONLY"},
+    {"ordinal": 12, "id": "gooo.cell.semantic-drift-guard.precedence-receipt", "activity": "EmitPrecedenceReceipt", "proof_choice": "REGRESSION", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.semantic-drift-guard.precedence-receipt.v1", "artifact": "decision-receipt", "evaluator": "guard.Compare", "authority": "READ_ONLY"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "gooo/semantic-drift-guard/independence/v1",
+  "tool": "gooo-semantic-drift-guard",
+  "authority_scope": "independent-reusable-evidence-tool",
+  "self_improvement_ledger_claim": "NOT_ASSESSED",
+  "semantic_drift_development_process": "NOT_CLOSED_BY_THIS_REPOSITORY",
+  "repository_writes": 0,
+  "local_test_executions": 0,
+  "cross_project_required_gates": 0,
+  "input_policy": "read-only immutable digest-bound source, IR, generated artifacts, and replay observations",
+  "output_policy": "caller-owned temporary or output directory only",
+  "preservation": {"delete": false, "recreate": false}
+}
